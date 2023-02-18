@@ -13,7 +13,7 @@ body {
   font-family: "Quicksand", sans-serif;
   overflow-x: hidden;
   background-color: var(--lightGrey);
-  height: 2000px;
+  /* height: 5000px; */
 }
 
 .navbar {
@@ -171,17 +171,25 @@ body {
 .about {
   padding: 7rem 0;
 }
-.about h2 {
+.about h2,
+.simulasi h2,
+.our-project h2,
+.contactus h2 {
   font-size: 2rem;
   text-align: center;
   color: var(--primary);
   font-weight: 700;
 }
-.about h2 span {
+.about h2 span,
+.contactus h2 span,
+.simulasi h2 span,
+.our-project h2 span {
   color: var(--secondary);
+  /* text-shadow: 1px 1px 3px #333; */
 }
 
-.about p {
+.about p,
+.our-project p {
   text-align: center;
   color: var(--primary);
   font-weight: 300;
@@ -212,10 +220,246 @@ body {
   letter-spacing: 1.1px;
 }
 
+/* Section Simulasi */
+.simulasi {
+  /* padding: 3rem 0; */
+  /* background-color: #17c974; */
+  text-align: center;
+}
+
+.simulasi h2 {
+  margin-bottom: 2rem;
+}
+
+.simulasi img {
+  height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulasi .simulasi-item {
+  padding: 2rem;
+  font-size: 0.8rem;
+}
+
+/* Our project */
+
+.our-project {
+  padding: 7rem 0 0;
+  /* background-color: #17c974; */
+}
+
+.our-project .project {
+  display: flex;
+  justify-content: center;
+}
+
+.our-project .project-card {
+  /* background-color: #fff; */
+  border: 1px solid #a8a7a7;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.our-project .project-card:hover {
+  box-shadow: 0 0 6px #a8a7a7;
+  transform: scale(1.01);
+}
+
+.our-project .project-card img {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+  height: 300px;
+}
+
+.project-card h3 {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.project .btn-detail {
+  display: flex;
+  background-color: var(--primary);
+  color: #fff;
+  text-align: center;
+  margin: 1rem auto 2rem;
+  padding: 0.8rem 3rem;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.project .btn-detail:hover {
+  background-color: #3228a5;
+}
+
+.our-project .btn-cek {
+  padding: 3rem 0 0;
+  text-align: center;
+}
+
+.our-project .btn-cek a {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem 3rem;
+  background-color: var(--secondary);
+  font-weight: 600;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.our-project .btn-cek a:hover {
+  background-color: #b88e3c;
+}
+
+.our-project .btn-cek p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+/* Section contact */
+.contactus {
+  padding: 7rem 0 1rem;
+}
+
+.contact {
+  display: flex;
+  background-image: url("../../img/bg contact.png");
+  padding: 3rem 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact .map {
+  padding-right: 2rem;
+  width: 100%;
+  height: 300px;
+}
+
+.form-contact .group-input {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+
+.form-contact .group-input span {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.form-contact .group-input input {
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+
+.form-contact .group-input input:focus {
+  outline: none;
+}
+
+.form-contact .btn-wa {
+  background-color: var(--green);
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Support */
+.support {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.support .support-item {
+  background-image: url("../../img/img-support.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 4rem;
+}
+
+footer {
+  background-color: #757577;
+  padding: 3rem 0;
+  color: #fff;
+}
+
+footer h3 {
+  font-size: 1.25rem;
+}
+
+footer .info ul li {
+  padding: 0.4rem 0;
+}
+
+footer .info ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+footer .info ul li a:hover {
+  color: var(--secondary);
+}
+
+footer .logo {
+  text-align: center;
+}
+
+footer .logo img {
+  margin-top: 1rem;
+  width: 10rem;
+}
+
+footer .address .item {
+  margin-top: 1rem;
+}
+
+footer .address .item span {
+  margin-right: 0.7rem;
+}
+
+footer .address .socials a {
+  display: inline-block;
+  color: #fff;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+
+footer .copyright p {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
 /* Media Queries */
 
 /* Laptop */
 @media (max-width: 1024px) {
+  html {
+    font-size: 85%;
+  }
+
+  .simulasi .simulasi-item {
+    padding: 1rem;
+  }
+
+  .our-project .project-card img {
+    height: 200px;
+  }
 }
 
 /* tab */
@@ -257,6 +501,18 @@ body {
   .navbar .navbar-collapse.slide {
     transform: translateX(0);
   }
+
+  .about .about-me h5 {
+    font-size: 1.2rem;
+  }
+
+  .about .about-me p {
+    font-size: 1rem;
+  }
+
+  /* .our-project .project-card img {
+    height: 200px;
+  } */
 }
 
 /* Mobile phone */
@@ -271,5 +527,47 @@ body {
 
   .navbar .navbar-collapse {
     width: 50%;
+  }
+
+  .simulasi .simulasi-item {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+
+  .our-project .project-card {
+    margin-top: 2rem;
+  }
+
+  .project-card span {
+    font-size: 1.3rem;
+  }
+
+  .project-card .btn-detail {
+    font-size: 1.4rem;
+  }
+
+  .contact .map {
+    padding-right: 0;
+  }
+
+  .contact .form-contact {
+    padding: 2rem 3rem 1rem;
+  }
+
+  .support {
+    padding: 0.8rem 2rem;
+  }
+
+  .support .support-item {
+    width: 100%;
+  }
+
+  footer .logo {
+    text-align: left;
+    margin-top: 1.2rem;
+  }
+
+  footer .address {
+    margin-top: 2.5rem;
   }
 }
