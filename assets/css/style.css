@@ -158,8 +158,9 @@ body {
   background-color: var(--secondary);
   padding: 1.2rem 3rem;
   font-size: 1.2rem;
-  border-radius: 30px;
+  border-radius: 15px;
   box-shadow: 1px 1px 3px #333;
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 
@@ -289,7 +290,7 @@ body {
   margin: 1rem auto 2rem;
   padding: 0.8rem 3rem;
   border: none;
-  border-radius: 30px;
+  border-radius: 12px;
   transition: background-color 0.3s;
 }
 
@@ -320,7 +321,7 @@ body {
 .our-project .btn-cek p {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: var(--secondary);
+  color: #212121;
   font-size: 1rem;
 }
 
@@ -347,7 +348,7 @@ body {
 .form-contact .group-input {
   display: flex;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 10px;
   justify-content: space-around;
 }
@@ -369,9 +370,10 @@ body {
 
 .form-contact .btn-wa {
   background-color: var(--green);
-  padding: 0.6rem 2rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 10px;
+  font-weight: 600;
 }
 
 /* Support */
@@ -438,6 +440,11 @@ footer .address .socials a {
   margin-top: 2rem;
   font-size: 1.5rem;
   padding-right: 1rem;
+  transition: all 0.2s ease;
+}
+
+footer .address .socials a:hover {
+  color: var(--secondary);
 }
 
 footer .copyright p {
@@ -465,7 +472,7 @@ footer .copyright p {
 /* tab */
 @media (max-width: 768px) {
   html {
-    font-size: 85%;
+    font-size: 90%;
   }
   .navbar .navbar-brand {
     font-size: 1.2rem;
@@ -487,7 +494,7 @@ footer .copyright p {
     position: absolute;
     height: 100vh;
     padding-top: 60px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     z-index: -1;
     transform: translateX(100%);
     transition: all 0.2s ease;
@@ -495,7 +502,8 @@ footer .copyright p {
   .navbar .navbar-collapse a {
     display: inline-block;
     padding-left: 1rem;
-    margin: 0.1rem 0;
+    font-size: 1.2rem;
+    margin: 0.6rem 0;
   }
 
   .navbar .navbar-collapse.slide {
@@ -518,7 +526,22 @@ footer .copyright p {
 /* Mobile phone */
 @media (max-width: 450px) {
   html {
-    font-size: 75%;
+    font-size: 85%;
+  }
+
+  .about {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .ourproject {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .our-project .project {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .hero .container .row {
@@ -551,7 +574,18 @@ footer .copyright p {
   }
 
   .contact .form-contact {
-    padding: 2rem 3rem 1rem;
+    padding: 2rem 1rem 1rem;
+  }
+
+  .form-contact .group-input {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .form-contact .btn-wa {
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 10px;
   }
 
   .support {
@@ -569,5 +603,10 @@ footer .copyright p {
 
   footer .address {
     margin-top: 2.5rem;
+  }
+
+  footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
