@@ -22,6 +22,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
 
     <title>PT. Borneo Delapan Enam</title>
@@ -52,7 +55,12 @@
 
     <!-- Section Hero -->
     <section class="hero" id="home">
-      <div class="container">
+      <div
+        class="container"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        data-aos-anchor-placement="top-bottom"
+      >
         <div class="row">
           <h1 class="fw-bold">
             Hunian Nyaman <span> di Area</span> Setrategis
@@ -72,7 +80,11 @@
           <p>Perusahaan developer property terpercaya di Balikpapan</p>
         </div>
 
-        <div class="row d-flex about-us">
+        <div
+          class="row d-flex about-us"
+          data-aos="zoom-in"
+          data-aos-once="true"
+        >
           <div class="col-md-4">
             <img
               class="img-thumbnail"
@@ -110,39 +122,74 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-2 col-md-4 col-6 simulasi-item">
+            <div
+              class="col-lg-2 col-md-4 col-6 simulasi-item"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-once="true"
+            >
               <img src="img/icon/home.svg" alt="" srcset="" />
               <p>
                 Cek ketersediaan stok rumah melalui website ini atau datang ke
                 kantor pemasaran kami
               </p>
             </div>
-            <div class="col-lg-2 col-md-4 col-6 simulasi-item">
+            <div
+              class="col-lg-2 col-md-4 col-6 simulasi-item"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="600"
+              data-aos-once="true"
+            >
               <img src="img/icon/cargo.svg" alt="" srcset="" />
               <p>
                 Lakukan pengiriman dokumen yang di perlukan untuk proses lebih
                 lanjut
               </p>
             </div>
-            <div class="col-lg-2 col-md-4 col-6 simulasi-item">
+            <div
+              class="col-lg-2 col-md-4 col-6 simulasi-item"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="600"
+              data-aos-once="true"
+            >
               <img src="img/icon/process.svg" alt="" srcset="" />
               <p>
                 Pegawai kami melakukan BI Checking, dan menunggu 1-2 mingggu,
                 akan di beritahukan proses selanjutnya
               </p>
             </div>
-            <div class="col-lg-2 col-md-4 col-6 simulasi-item">
+            <div
+              class="col-lg-2 col-md-4 col-6 simulasi-item"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="600"
+              data-aos-once="true"
+            >
               <img src="img/icon/alogaritma.svg" alt="" srcset="" />
               <p>
                 Jika status BI Checking OK, lanjut proses administrasi
                 selanjutnya
               </p>
             </div>
-            <div class="col-lg-2 col-md-4 col-6 simulasi-item">
+            <div
+              class="col-lg-2 col-md-4 col-6 simulasi-item"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="600"
+              data-aos-once="true"
+            >
               <img src="img/icon/pricing.svg" alt="" srcset="" />
               <p>Lakukan pembayaran DP dan administrasi lainnya</p>
             </div>
-            <div class="col-lg-2 col-md-4 col-6 simulasi-item">
+            <div
+              class="col-lg-2 col-md-4 col-6 simulasi-item"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="600"
+              data-aos-once="true"
+            >
               <img src="img/icon/home-sweet.svg" alt="" srcset="" />
               <p>Rumah di bangun dan setelah selesai siap untuk dihuni</p>
             </div>
@@ -159,7 +206,12 @@
           <p>Banyak ketersediaan tipe rumah yang siap dihuni</p>
         </div>
 
-        <div class="row project d-flex">
+        <div
+          class="row project d-flex"
+          data-aos="zoom-in-down"
+          data-aos-duration="700"
+          data-aos-once="true"
+        >
           <div class="col-lg-3 col-md-4">
             <div class="project-card">
               <img src="img/rumah1.png" alt="" />
@@ -211,7 +263,13 @@
         </div>
 
         <div class="row">
-          <div class="btn-cek">
+          <div
+            class="btn-cek"
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
+            data-aos-duration="500"
+            data-aos-once="true"
+          >
             <a href="">Cek rumah subsidi</a>
             <p>Kami juga banyak menyediakan rumah subsidi pemerintah</p>
           </div>
@@ -335,6 +393,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <script src="assets/js/script.js"></script>
   </body>
