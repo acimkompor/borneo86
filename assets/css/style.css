@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 :root {
   --primary: #282085;
@@ -158,11 +158,57 @@ body {
   padding: 1.2rem 3rem;
   font-size: 1.2rem;
   border-radius: 30px;
+  box-shadow: 1px 1px 3px #333;
   transition: all 0.2s ease;
 }
 
 .hero a:hover {
   background-color: #b88e3c;
+}
+
+/* About Section */
+.about {
+  padding: 7rem 0;
+}
+.about h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary);
+  font-weight: 700;
+}
+.about h2 span {
+  color: var(--secondary);
+}
+
+.about p {
+  text-align: center;
+  color: var(--primary);
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+.about .about-us {
+  justify-content: center;
+  gap: 5rem;
+}
+
+.about img {
+  max-width: 100%;
+  background: none;
+  border: none;
+}
+
+.about .about-me h5 {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.about .about-me p {
+  text-align: start;
+  margin-bottom: 1rem;
+  letter-spacing: 1.1px;
 }
 
 /* Media Queries */
