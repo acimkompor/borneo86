@@ -565,7 +565,7 @@ body {
 }
 
 .slider .price p {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 .slider .description p {
@@ -887,12 +887,20 @@ footer .copyright p {
     padding-top: 8rem;
   }
 
+  .slider .price p {
+    font-size: 0.9rem;
+  }
+
   .spesifikasi .specs .item-specs .title {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .spesifikasi .specs .item-specs .desc {
-    font-size: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .spesifikasi {
+    margin: 0 1rem;
   }
 
   .specs {
@@ -968,6 +976,10 @@ footer .copyright p {
     padding: 1rem 3rem;
     border: none;
     border-radius: 10px;
+  }
+
+  .description p {
+    font-size: 1.2rem;
   }
 
   .support {
