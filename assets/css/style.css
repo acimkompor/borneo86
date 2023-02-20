@@ -25,6 +25,7 @@ body {
 .navbar .container .navbar-collapse a {
   color: var(--primary);
   padding: 0 1rem;
+  font-weight: 500;
 }
 
 .navbar .container .navbar-collapse a:hover {
@@ -41,6 +42,16 @@ body {
   font-weight: 600;
   color: var(--primary);
   letter-spacing: -1px;
+}
+
+.navbar .back {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.navbar .back:hover {
+  color: #7c72ee;
 }
 
 /* Menu Humberger */
@@ -192,7 +203,7 @@ body {
 .about p,
 .our-project p {
   text-align: center;
-  color: var(--primary);
+  color: var(--blcak);
   font-weight: 300;
   font-size: 1.1rem;
   margin-bottom: 4rem;
@@ -282,19 +293,21 @@ body {
   color: var(--primary);
 }
 
-.project .btn-detail {
+.project-card a {
   display: flex;
+  justify-content: center;
   background-color: var(--primary);
   color: #fff;
   text-align: center;
-  margin: 1rem auto 2rem;
+  margin: 1rem;
   padding: 0.8rem 3rem;
   border: none;
   border-radius: 12px;
   transition: background-color 0.3s;
+  text-decoration: none;
 }
 
-.project .btn-detail:hover {
+.project-card a:hover {
   background-color: #3228a5;
 }
 
@@ -393,6 +406,342 @@ body {
   height: 4rem;
 }
 
+.slider {
+  padding: 6rem 0;
+}
+
+.slider .carousel-item {
+  min-height: 70vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.slider .carousel-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(124, 114, 238, 0.1);
+  z-index: -1;
+}
+
+.slider .carousel-item .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.slider .carousel-item h1 {
+  font-size: 5rem;
+  color: #fff;
+  opacity: 0;
+}
+.slider .carousel-item p {
+  color: #fff;
+  opacity: 0;
+}
+
+.slider .carousel-item.active h1 {
+  animation: fadeInLeft 0.5s ease forwards;
+}
+.slider .carousel-item.active p {
+  animation: fadeInRight 0.5s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.slider .crousel-controls {
+  /* background-color: #17c974; */
+  position: absolute;
+  left: 50%;
+  bottom: -80px;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+.slider .carousel-indicators {
+  position: relative;
+  margin: 0;
+}
+
+.slider .carousel-indicators li {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.slider .carousel-indicators li.active {
+  border-color: #fff;
+  transform: scale(1.2);
+}
+
+.slider .carousel-control-prev,
+.slider .carousel-control-next {
+  height: 60px;
+  width: 60px;
+  opacity: 1;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+.slider .carousel-control-prev span,
+.slider .carousel-control-next span {
+  font-size: 30px;
+  color: var(--blcak);
+}
+
+.slider .carousel-control-prev:hover,
+.slider .carousel-control-next:hover {
+  box-shadow: 0 0 7px var(--blcak);
+}
+
+.slider .carousel-control-prev {
+  left: -90px;
+}
+
+.slider .carousel-control-next {
+  right: -90px;
+}
+
+/* Detail Section */
+
+.slider .logo {
+  display: flex;
+  padding: 1.2rem 0;
+  justify-content: center;
+}
+
+.slider .logo img {
+  width: 200px;
+}
+
+.slider .price {
+  padding: 0.4rem 0;
+}
+
+.slider .price h2 {
+  color: var(--blcak);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.slider .price h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.slider .price p {
+  font-size: 0.7rem;
+}
+
+.slider .description p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.slider .wa-call {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.slider .wa-call a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 1rem 0;
+  width: 170px;
+}
+
+.slider .wa-call .wa {
+  background-color: #17c974;
+  transition: all 0.3s ease;
+}
+
+.slider .wa-call .wa:hover {
+  background-color: #19dc7e;
+}
+
+.slider .wa-call .call {
+  background-color: #175ec9;
+  transition: all 0.3s ease;
+}
+.slider .wa-call .call:hover {
+  background-color: #1867dd;
+}
+
+/* Spesifikasi */
+.spesifikasi {
+  margin: 6rem 0 1rem;
+}
+
+.spesifikasi .facility {
+  display: flex;
+  justify-content: center;
+}
+
+.spesifikasi h3,
+.tipe-pembyaran h3,
+.description h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.spesifikasi .facility-item {
+  display: flex;
+  justify-content: space-around;
+  width: 22rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.spesifikasi .specs {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.spesifikasi .specs img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.spesifikasi .specs .specs-container {
+  display: flex;
+  margin-left: 2.5%;
+  gap: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.spesifikasi .specs .item-specs {
+  padding: 0.4rem 1rem;
+  width: 45%;
+  background-color: #ffffff;
+  border: 0.8px solid #818080;
+  border-radius: 15px;
+}
+
+.spesifikasi .specs .item-specs p {
+  margin: 0;
+}
+
+.spesifikasi .specs .item-specs .title {
+  text-align: left;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+
+.spesifikasi .specs .item-specs .desc {
+  text-align: left;
+  font-weight: 700;
+  color: var(--blcak);
+}
+
+.spesifikasi .navigasi-to-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.spesifikasi .navigasi-to-data .btn-cek {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: #17c974;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+}
+
+.spesifikasi p {
+  text-align: center;
+}
+
+.tipe-pembyaran .tipe {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Section tab1 */
+.nav .nav-item .nav-link {
+  color: var(--darkGrey);
+  font-weight: 300;
+  transition: all 0s;
+}
+
+.nav .nav-item .nav-link:hover {
+  border-color: transparent;
+}
+
+.nav .nav-item .nav-link.active {
+  border: none;
+  border-bottom: 3px solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.tab-content .tab-pane {
+  padding: 2rem;
+  height: 100%;
+}
+
+.tab-content .tab-pane img {
+  height: 100%;
+  width: 100%;
+}
+
+.tab-content .tab-pane .map {
+  height: 400px;
+  width: 100%;
+}
+
 footer {
   background-color: #757577;
   padding: 3rem 0;
@@ -469,19 +818,7 @@ footer .copyright p {
   }
 }
 
-/* tab */
-@media (max-width: 768px) {
-  html {
-    font-size: 90%;
-  }
-  .navbar .navbar-brand {
-    font-size: 1.2rem;
-  }
-
-  .navbar img {
-    max-width: 2rem;
-  }
-
+@media (max-width: 992px) {
   .menu-toggle {
     display: flex;
   }
@@ -509,6 +846,20 @@ footer .copyright p {
   .navbar .navbar-collapse.slide {
     transform: translateX(0);
   }
+}
+
+/* tab */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+  .navbar .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar img {
+    max-width: 2rem;
+  }
 
   .about .about-me h5 {
     font-size: 1.2rem;
@@ -518,9 +869,40 @@ footer .copyright p {
     font-size: 1rem;
   }
 
-  /* .our-project .project-card img {
-    height: 200px;
-  } */
+  .slider .crousel-controls {
+    bottom: -60px;
+  }
+
+  .slider .carousel-indicators li {
+    width: 40px;
+    height: 40px;
+  }
+
+  .slider .carousel-control-prev,
+  .slider .carousel-control-next {
+    display: none;
+  }
+
+  .slider .logo {
+    padding-top: 8rem;
+  }
+
+  .spesifikasi .specs .item-specs .title {
+    font-size: 0.8rem;
+  }
+
+  .spesifikasi .specs .item-specs .desc {
+    font-size: 0.8rem;
+  }
+
+  .specs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .specs .specs-container {
+    margin-top: 2rem;
+  }
 }
 
 /* Mobile phone */
