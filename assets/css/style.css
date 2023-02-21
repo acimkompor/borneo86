@@ -1,3 +1,5 @@
+/* Created by Acimkompor @ 2023 */
+
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 :root {
@@ -651,7 +653,7 @@ body {
   display: flex;
   margin-left: 2.5%;
   gap: 2.5%;
-  margin-bottom: 2.5%;
+  margin-bottom: 1rem;
 }
 
 .spesifikasi .specs .item-specs {
@@ -702,6 +704,9 @@ body {
 .spesifikasi p {
   text-align: center;
 }
+.tipe-pembyaran h3 {
+  padding-top: 3rem;
+}
 
 .tipe-pembyaran .tipe {
   font-size: 1.2rem;
@@ -709,6 +714,9 @@ body {
 }
 
 /* Section tab1 */
+.tabs {
+  padding: 0 1rem;
+}
 .nav .nav-item .nav-link {
   color: #333;
   font-weight: 300;
@@ -740,6 +748,55 @@ body {
 .tab-content .tab-pane .map {
   height: 400px;
   width: 100%;
+}
+
+.tab-content .tab-syarat ul li {
+  padding: 0.7rem 0;
+}
+
+.data-rumah {
+  padding: 6.5rem 0 0;
+}
+
+.data-rumah .description {
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.data-rumah .description a {
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  padding: 0.5rem 1rem;
+  background-color: #17c974;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 500;
+  right: 0;
+  transform: translateX(-10%);
+}
+
+.data-rumah .table tr th,
+.data-rumah .table tr td {
+  border: 1px solid #5c5c5c;
+}
+
+.data-rumah .table tr th {
+  text-align: center;
+}
+
+.table .status,
+.table .aksi {
+  background-color: #17c974;
+}
+
+.table .status.proses,
+.table .aksi.proses {
+  background-color: #175ec9;
+}
+
+.syarat-pengajuan {
+  padding: 5rem 0 0;
 }
 
 footer {
@@ -866,7 +923,7 @@ footer .copyright p {
   }
 
   .about .about-me p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .slider .crousel-controls {
@@ -909,7 +966,12 @@ footer .copyright p {
   }
 
   .specs .specs-container {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+
+  .tab-content .tab-pane {
+    padding: 2rem 0;
   }
 }
 
@@ -980,6 +1042,18 @@ footer .copyright p {
 
   .description p {
     font-size: 1.2rem;
+  }
+
+  .data-rumah {
+    padding: 2rem 0;
+  }
+
+  .data-rumah .description a {
+    position: static;
+  }
+
+  .syarat-pengajuan {
+    padding: 2rem 0;
   }
 
   .support {
