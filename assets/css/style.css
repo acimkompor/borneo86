@@ -370,7 +370,8 @@ body {
 
 .form-contact .group-input span {
   margin-right: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: #5c5c5c;
 }
 
 .form-contact .group-input input {
@@ -386,6 +387,7 @@ body {
 .form-contact .btn-wa {
   background-color: var(--green);
   padding: 1rem 2rem;
+  color: #fff;
   border: none;
   border-radius: 10px;
   font-weight: 600;
@@ -590,6 +592,8 @@ body {
   display: inline-block;
   padding: 1rem 0;
   width: 170px;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .slider .wa-call .wa {
@@ -741,8 +745,7 @@ body {
 }
 
 .tab-content .tab-pane img {
-  height: 100%;
-  width: 100%;
+  height: 50%;
 }
 
 .tab-content .tab-pane .map {
@@ -767,7 +770,7 @@ body {
   text-decoration: none;
   position: absolute;
   top: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   background-color: #17c974;
   color: #fff;
   border-radius: 10px;
@@ -785,14 +788,25 @@ body {
   text-align: center;
 }
 
-.table .status,
-.table .aksi {
+.data-rumah .table a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.3rem 1rem;
   background-color: #17c974;
 }
 
-.table .status.proses,
-.table .aksi.proses {
+.data-rumah .table a.disabled {
   background-color: #175ec9;
+}
+
+.table .status {
+  color: #17c974;
+  font-weight: 600;
+}
+
+.table .status.proses {
+  color: #175ec9;
+  font-weight: 600;
 }
 
 .syarat-pengajuan {
@@ -856,6 +870,45 @@ footer .address .socials a:hover {
 footer .copyright p {
   text-align: center;
   margin-top: 1.5rem;
+}
+
+/* ZOOM IMAGE */
+.zoom {
+  width: 60%;
+  cursor: pointer;
+}
+
+.popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+  transition: height 1s, width 1s, padding 1s, visibility 1s,
+    opacity 0.5s ease-out;
+  display: none;
+}
+
+.popup-image span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  object-fit: cover;
 }
 
 /* Media Queries */
@@ -973,6 +1026,14 @@ footer .copyright p {
   .tab-content .tab-pane {
     padding: 2rem 0;
   }
+
+  .zoom {
+    width: 100%;
+  }
+
+  .popup-image img {
+    width: 95%;
+  }
 }
 
 /* Mobile phone */
@@ -1049,11 +1110,17 @@ footer .copyright p {
   }
 
   .data-rumah .description a {
-    position: static;
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+
+  .data-rumah .table {
+    margin-top: 2rem;
   }
 
   .syarat-pengajuan {
-    padding: 2rem 0;
+    padding: 2rem 0 0;
   }
 
   .support {
